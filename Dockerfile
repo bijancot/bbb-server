@@ -26,6 +26,10 @@ WORKDIR /home/root
 #copy installer
 COPY bbb-install.sh ./
 
+#Run Installer (but first change permission
+RUN chmod +x bbb-install.sh
+RUN ./bbb-install.sh
+
 #update environtment 
 #RUN apt-get update & apt-get upgrade
 
