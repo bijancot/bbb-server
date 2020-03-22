@@ -2,6 +2,9 @@
 FROM ubuntu:16.04
 
 #update environtment 
+RUN apt-get update --fix-missing && \
+    apt-get install -y software-properties-common && \
+    rm -rf /var/lib/apt/lists/*
 RUN apt-get update & apt-get upgrade
 
 #set workdir
