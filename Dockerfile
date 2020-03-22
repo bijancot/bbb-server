@@ -17,6 +17,9 @@ RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security ma
 RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security universe"
 RUN add-apt-repository "deb http://security.ubuntu.com/ubuntu xenial-security multiverse"
 
+#Update after add new repo
+RUN apt-get update & apt-get upgrade
+
 #set workdir
 WORKDIR /home/root
 
